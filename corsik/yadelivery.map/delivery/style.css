@@ -1,0 +1,390 @@
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #fff;
+    font-family: Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif
+}
+
+p {
+    margin-bottom: 0
+}
+
+img {
+    border: none
+}
+
+footer, header {
+    margin: auto;
+    max-width: 1920px
+}
+
+main {
+    margin: auto
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer
+}
+
+button {
+    border: none;
+    cursor: pointer
+}
+
+ul {
+    list-style: none
+}
+
+.blocks {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row
+}
+
+.left-block {
+    display: none;
+    margin-right: 70px;
+    width: 255px;
+    height: 300px;
+    background: #a91d2d;
+    flex-shrink: 0
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto
+}
+
+.delivery-title {
+    padding-top: 40px;
+    margin-bottom: 25px;
+    padding-bottom: 5px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #7c7c7c;
+    border-bottom: 1px solid #eaeaea
+}
+
+.corsik_yaDeliveryMap {
+    width: 100%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    display: grid;
+    gap: 30px;
+    grid-template-columns:1fr;
+    grid-template-areas:"address" "map" "options"
+}
+
+.corsik_yaDeliveryMap__map {
+    grid-area: map;
+    background: #eee;
+    height: min(66vw, 465px);
+    display: flex
+}
+
+
+.corsik_yaDeliveryMap__address {
+    grid-area: address
+}
+
+.corsik_yaDeliveryMap__address-header {
+    margin-bottom: 30px;
+    width: 60%;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 1;
+    color: #000
+}
+
+.corsik_yaDeliveryMap__options {
+    grid-area: options;
+    margin-bottom: 40px
+}
+
+.corsik_yaDeliveryMap__options-radio {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #eaeaea
+}
+
+.corsik_yaDeliveryMap__address-title {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000
+}
+
+.corsik_yaDeliveryMap__input {
+    padding: 13px 11px;
+    border: 1px solid #eee;
+    width: 100%
+}
+
+.corsik_yaDeliveryMap__input::-moz-placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #c6c6c6;
+    opacity: 0
+}
+
+.corsik_yaDeliveryMap__input::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #c6c6c6;
+    opacity: 0
+}
+
+.corsik_yaDeliveryMap__radioBlock {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px
+}
+
+.corsik_yaDeliveryMap__cost-title {
+    margin-bottom: 30px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: #7c7c7c
+}
+
+.corsik_yaDeliveryMap__cost-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 45px
+}
+
+.corsik_yaDeliveryMap__cost-text {
+    font-size: 14px;
+    line-height: 150%;
+    color: #7c7c7c;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px
+}
+
+.corsik_yaDeliveryMap__cost-text img {
+    flex-shrink: 0;
+    cursor: pointer
+}
+
+.corsik_yaDeliveryMap__cost-value {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000
+}
+.corsik_yaDeliveryMap__cost-number{
+    padding-right: 5px;
+}
+
+.corsik_yaDeliveryMap__carsBlock, .corsik_yaDeliveryMap__manipulators {
+    margin-bottom: 30px;
+    display: none;
+    align-items: baseline;
+    flex-wrap: wrap
+}
+
+.corsik_yaDeliveryMap__carsBlock label, .corsik_yaDeliveryMap__manipulators label {
+    padding-left: 26px
+}
+
+.corsik_yaDeliveryMap__carsBlock {
+    gap: 96px
+}
+
+.corsik_yaDeliveryMap__manipulators {
+    gap: 60px
+}
+
+.corsik_radio {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #7c7c7c;
+    cursor: pointer;
+    min-width: 120px
+}
+
+
+.radio__text {
+    margin-bottom: 33px
+}
+
+.radio__car {
+    margin-bottom: 5px
+}
+
+.radio__car path {
+    transition: .3s ease-in-out
+}
+
+.radio__input {
+    display: none
+}
+
+.radio__info {
+    position: relative;
+    padding-left: 26px;
+    display: inline-block;
+    font-size: 14px;
+    transition: .3s ease-in-out
+}
+
+.radio__info::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #eaeaea;
+    border-radius: 50%;
+    transition: .3s ease-in-out
+}
+
+.radio__info::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(64%, 64%);
+    height: 8px;
+    width: 8px;
+    background: #a91d2d;
+    opacity: 0;
+    border-radius: 50%;
+    transition: .3s ease-in-out
+}
+
+.radio__input:checked + .radio__info::before {
+    border-color: #a91d2d
+}
+
+.radio__input:checked + .radio__info::after {
+    opacity: 1
+}
+
+.radio__input:checked + .radio__info {
+    color: #000
+}
+
+.radio__input:checked + .radio__info .radio__car path {
+    fill: #000
+}
+
+.car {
+    text-align: center;
+    cursor: pointer;
+}
+
+.car__type{
+    opacity: 0.5;
+    transition: .3s ease-in-out;
+    border: 1px solid transparent;
+    padding: 10px;
+    margin: -10px;
+}
+.car__type:hover{
+    opacity: 1;
+}
+.car__input {
+    display: none
+}
+
+.car__input:checked + .car__weight {
+    color: #000
+}
+
+.car__input:checked + .car__type  {
+    opacity: 1;
+    border-color: #a91d2d;
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px
+    }
+
+    .corsik_yaDeliveryMap {
+        margin-bottom: 80px
+    }
+
+    .corsik_yaDeliveryMap__map {
+        height: 465px;
+    }
+
+    .corsik_yaDeliveryMap__address-header {
+        margin-bottom: 30px;
+        width: 100%
+    }
+
+    .corsik_yaDeliveryMap__input {
+        padding: 12px 11px;
+        width: 495px!important;
+    }
+
+    .corsik_yaDeliveryMap__input::-moz-placeholder {
+        opacity: 1
+    }
+
+    .corsik_yaDeliveryMap__input::placeholder {
+        opacity: 1
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px
+    }
+}
+
+@media (min-width: 1230px) {
+    .container {
+        width: 1200px
+    }
+
+    .left-block {
+        display: block
+    }
+
+    .delivery-title {
+        width: calc(50% - 15px);
+        margin-left: auto;
+        margin-bottom: 30px
+    }
+
+    .corsik_yaDeliveryMap {
+        grid-template-columns:1fr 1fr;
+        grid-template-areas:"map address" "map options";
+        grid-template-rows:140px auto
+    }
+
+    .corsik_yaDeliveryMap__options {
+        margin-bottom: 46px
+    }
+
+    .car:hover .car__type svg path {
+        fill: #000
+    }
+
+    .car:hover .car__weight {
+        color: #000
+    }
+}
+
